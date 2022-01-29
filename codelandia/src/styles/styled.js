@@ -20,6 +20,12 @@ justify-content: space-around;
 }
 }
 
+@media screen and (max-width: 800px){
+    button{
+        margin: -100px auto 0;
+    }
+}
+
 `
 
 export const Input = styled.div`
@@ -28,7 +34,6 @@ align-items: center;
 justify-content: center;
 
 input{
-margin-left: 2vw;
 width: 900px;
 height: 50px;
 background: rgba(255, 255, 255, 0.2);
@@ -50,6 +55,13 @@ font-weight: 300;
 font-size: 16px;
 text-indent: 50px;
 }
+}
+
+@media screen and (max-width: 912px){
+    input{
+        width: 90%; 
+        margin: -50px auto 0;
+    }
 }
 `
 
@@ -85,7 +97,11 @@ p{
 }
 }}
 
-/* @media screen and (max-width: 600px){
+@media screen and (max-width: 600px){
+
+    div{
+        height: 394px;
+    }
     p{
         font-size: 1.2rem;
     }
@@ -95,7 +111,15 @@ p{
         font-size: 5.9rem;
     }
     }
-} */
+}
+
+
+@media screen and (max-width: 280px) and (max-width: 653px){
+  div{
+     height: 580px;
+    
+  } 
+}
 `
 
 export const Pagination = styled.div`
@@ -103,8 +127,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 .paginationBttns{
-    position:relative; //tirar
-    top: 8vw;     //tirar
+    position:relative;
+    top: 8vw;     
     margin: 10px;
     width: 80%;
     height: 40px;
@@ -136,18 +160,3 @@ justify-content: center;
 
 `
 
-// export const ContainerBttnToggle = styled.div`
-// display: flex;
-// align-items: flex-end;
-// justify-content: flex-end;
-// margin: 0;
-// padding: 0;
-
-// button{
-//     position: relative;
-// top: -110vw;
-// /* margin: 0;
-// padding: 0;
-// } */
-// }
-// `

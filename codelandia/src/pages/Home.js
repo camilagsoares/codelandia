@@ -6,11 +6,11 @@ import { CardWhite } from '../styles/styled'
 import { Animated, FadeAnimations } from 'animated-styled-components'
 import { Input, Pagination } from '../styles/styled'
 import ReactPaginate from 'react-paginate'
+import Loading from '../components/Loading'
 
 
 
 const Home = () => {
-
 
     const [data, setData] = useState([])
     const [pageNumber, setPageNumber] = useState(0)
@@ -26,8 +26,6 @@ const Home = () => {
             return val
         }
     }))
-
-
         .map(data => {
             return (
                 <Animated
@@ -36,19 +34,20 @@ const Home = () => {
                         duration_in: 1
                     }}
                 >
-                    <CardWhite>
-                        <div className="accent">
-                            <p className="description">{data.created_at}</p>
-                            <p>{data.title}</p>
-                            <p className="description">{data.description}</p>
-                        </div>
+                    {data ?
+                        <CardWhite>
+                            <div className="accent">
+                                <p className="description">{data.created_at}</p>
+                                <p>{data.title}</p>
+                                <p className="description">{data.description}</p>
+                            </div>
 
-                    </CardWhite>
+                        </CardWhite>
+                        : <Loading />
+                    }
                 </Animated>
             )
         })
-
-
 
     const requistion = () => {
         axios.get(BASE_URL)
@@ -76,21 +75,17 @@ const Home = () => {
             <Header>
                 <button>Codelandia</button>
                 <button>blog</button>
-               
-
-
             </Header>
 
             <Input>
-                    <input placeholder="Pesquisar no blog"
-                        type="text"
-                        onChange={(event) => {
-                            setSearchTerm(event.target.value)
-                        }}
+                <input placeholder="Pesquisar no blog"
+                    type="text"
+                    onChange={(event) => {
+                        setSearchTerm(event.target.value)
+                    }}
 
-                    />
-                </Input>
-
+                />
+            </Input>
 
             {displayData}
 
