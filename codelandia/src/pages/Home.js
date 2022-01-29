@@ -11,11 +11,23 @@ const Home = () => {
 
     const [data, setData] = useState([])
     const [pageNumber, setPageNumber] = useState(0)
+    const [searchTerm, setSearchTerm] = useState("")
 
-    const dataPerPage = 6
+   
+
+    const dataPerPage = 7
     const pagesVisited = pageNumber * dataPerPage
 
-    const displayData = data.slice(pagesVisited, pagesVisited + dataPerPage).map(data => {
+    const displayData = data.slice(pagesVisited, pagesVisited + dataPerPage).filter((val => {
+        if (searchTerm == ""){
+            return val
+        } else if (val.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())){
+            return val
+        }
+    }))
+    
+    
+    .map(data => {
         return (
             <Animated
                 animation={{
@@ -65,7 +77,13 @@ const Home = () => {
                 <button>Blog</button> */}
 
                 <Input>
-                    <input placeholder="Pesquisar no blog" />
+                    <input placeholder="Pesquisar no blog" 
+                    type="text"
+                    onChange={(event) => {
+                        setSearchTerm(event.target.value)
+                    }}
+                    
+                    />
                 </Input>
 
 

@@ -53,6 +53,9 @@ text-indent: 50px;
 `
 
 export const CardWhite = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
 div{ 
 background-color: white;
 box-shadow:  1px 1px 1px 1px #DDDFDE;
@@ -79,12 +82,19 @@ p{
     background-color: #448EDE;
     color: white;
 }
-}
+}}
 
-}
-display: flex;
-align-items: center;
-justify-content: center;
+/* @media screen and (max-width: 600px){
+    p{
+        font-size: 1.2rem;
+    }
+
+    p{
+        &.description{
+        font-size: 5.9rem;
+    }
+    }
+} */
 `
 
 export const Pagination = styled.div`
@@ -100,6 +110,7 @@ justify-content: center;
     list-style: none;
     display: flex;
     justify-content: center;
+    font-family: 'Lexend Deca';
 }
 
 .paginationBttns a{
