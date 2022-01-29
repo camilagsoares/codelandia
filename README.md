@@ -3,7 +3,7 @@
  
 
 <p align="center">
-  <a href="/">Visite o projeto</a>
+  <a href="https://codelandia-challenge.vercel.app/">Visite o projeto</a>
 </p>
 
 ## Sobre o desafio:
