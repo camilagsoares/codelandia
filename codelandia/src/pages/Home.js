@@ -11,9 +11,7 @@ const Home = () => {
 
     const [data, setData] = useState([])
     const [pageNumber, setPageNumber] = useState(0)
-    const [searchTerm, setSearchTerm] = useState("")
-
-   
+    const [searchTerm, setSearchTerm] = useState("") 
 
     const dataPerPage = 7
     const pagesVisited = pageNumber * dataPerPage
@@ -73,8 +71,7 @@ const Home = () => {
     return (
         <div>
             <Header>
-                {/* <button>Codelândia</button>
-                <button>Blog</button> */}
+               {/* <button>Codelandia</button> */}
 
                 <Input>
                     <input placeholder="Pesquisar no blog" 
