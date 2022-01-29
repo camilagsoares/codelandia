@@ -1,11 +1,9 @@
 export const lightTheme = {
     body: '#F3F5F7',
-    fontColor: '#000',
-    accent: "#1F8E56"
+    fontColor: '#000'
 }
 
 export const darkTheme = {
     body: '#000',
-    fontColor: '#fff',
-    accent: "#DB35C3"
+    fontColor: '#fff'
 }

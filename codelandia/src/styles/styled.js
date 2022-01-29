@@ -4,9 +4,9 @@ export const Header = styled.div`
 height: 250px;
 width: 100%;
 background-image: linear-gradient(to right, #574AE8, #3EA1DB);
-/* display: flex;
-justify-content: space-between; */
-/* button{
+display: flex;
+justify-content: space-around; 
+ button{
     font-family: 'Lexend Deca';
     font-size: 24px;
     background-color: transparent;
@@ -14,11 +14,11 @@ justify-content: space-between; */
     color: white;
     cursor: pointer;
     font-weight: 300;
+    margin-top: -8vw;
 :hover{
-    color: pink
+    color: #133954;
 }
-} */
-
+}
 
 `
 
@@ -26,8 +26,7 @@ export const Input = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-position: relative;
-top: 10vw;
+
 input{
 margin-left: 2vw;
 width: 900px;
@@ -41,6 +40,8 @@ text-indent: 50px;
 font-weight: 300;
 outline: none;
 border-radius: 4px;
+position: relative;
+top: -5vw;
 
 ::placeholder{
 font-family: 'Lexend Deca';
@@ -64,7 +65,7 @@ height: 195px;
 margin: 10px;
 border-radius: 9px;
 position: relative;
-top: 5vw;
+top: 3vw;
 font-family: 'Lexend Deca';
 color: #1A202C;
 font-size: 26px;
@@ -134,3 +135,19 @@ justify-content: center;
 }
 
 `
+
+// export const ContainerBttnToggle = styled.div`
+// display: flex;
+// align-items: flex-end;
+// justify-content: flex-end;
+// margin: 0;
+// padding: 0;
+
+// button{
+//     position: relative;
+// top: -110vw;
+// /* margin: 0;
+// padding: 0;
+// } */
+// }
+// `
