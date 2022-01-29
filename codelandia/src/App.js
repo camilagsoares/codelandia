@@ -13,14 +13,12 @@ const App = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }
 
-  return(
+  return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
        <GlobalStyles />
-
        <button onClick={() => themeToggler()}>Change theme</button>
-    <Home/>
-   
-    </ThemeProvider>
+      <Home/>
+     </ThemeProvider>
   )
 }
 
