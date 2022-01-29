@@ -4,9 +4,9 @@ export const Header = styled.div`
 height: 250px;
 width: 100%;
 background-image: linear-gradient(to right, #574AE8, #3EA1DB);
-/* display: flex;
-justify-content: space-between; */
-/* button{
+display: flex;
+justify-content: space-around; 
+ button{
     font-family: 'Lexend Deca';
     font-size: 24px;
     background-color: transparent;
@@ -14,11 +14,17 @@ justify-content: space-between; */
     color: white;
     cursor: pointer;
     font-weight: 300;
+    margin-top: -8vw;
 :hover{
-    color: pink
+    color: #133954;
 }
-} */
+}
 
+@media screen and (max-width: 800px){
+    button{
+        margin: -100px auto 0;
+    }
+}
 
 `
 
@@ -26,10 +32,8 @@ export const Input = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-position: relative;
-top: 10vw;
+
 input{
-margin-left: 2vw;
 width: 900px;
 height: 50px;
 background: rgba(255, 255, 255, 0.2);
@@ -41,6 +45,8 @@ text-indent: 50px;
 font-weight: 300;
 outline: none;
 border-radius: 4px;
+position: relative;
+top: -5vw;
 
 ::placeholder{
 font-family: 'Lexend Deca';
@@ -49,6 +55,13 @@ font-weight: 300;
 font-size: 16px;
 text-indent: 50px;
 }
+}
+
+@media screen and (max-width: 912px){
+    input{
+        width: 90%; 
+        margin: -50px auto 0;
+    }
 }
 `
 
@@ -64,7 +77,7 @@ height: 195px;
 margin: 10px;
 border-radius: 9px;
 position: relative;
-top: 5vw;
+top: 3vw;
 font-family: 'Lexend Deca';
 color: #1A202C;
 font-size: 26px;
@@ -84,7 +97,11 @@ p{
 }
 }}
 
-/* @media screen and (max-width: 600px){
+@media screen and (max-width: 600px){
+
+    div{
+        height: 394px;
+    }
     p{
         font-size: 1.2rem;
     }
@@ -94,7 +111,15 @@ p{
         font-size: 5.9rem;
     }
     }
-} */
+}
+
+
+@media screen and (max-width: 280px) and (max-width: 653px){
+  div{
+     height: 580px;
+    
+  } 
+}
 `
 
 export const Pagination = styled.div`
@@ -102,8 +127,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 .paginationBttns{
-    position:relative; //tirar
-    top: 8vw;     //tirar
+    position:relative;
+    top: 8vw;     
     margin: 10px;
     width: 80%;
     height: 40px;
@@ -134,3 +159,4 @@ justify-content: center;
 }
 
 `
+

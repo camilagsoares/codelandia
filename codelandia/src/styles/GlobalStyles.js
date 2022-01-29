@@ -7,13 +7,6 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    background-color: ${props => props.theme.body};
+    background-color: #F3F5F7;
 }
-
-&.accent {
-    background-color: ${props => props.theme.accent};
-    color: ${props => props.theme.text};
-    height: 430px;
-    }
-
 `
