@@ -9,4 +9,11 @@ export const GlobalStyles = createGlobalStyle`
 body{
     background-color: ${props => props.theme.body};
 }
+
+&.accent {
+    background-color: ${props => props.theme.accent};
+    color: ${props => props.theme.text};
+    height: 430px;
+    }
+
 `
